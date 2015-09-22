@@ -11,7 +11,13 @@
 }
 
 .nav-bar.isBullet {
-	height: 40px;
+	height: 80px;
+}
+
+.nav-bar.isBullet .entryTitle {
+	margin-top: 10px;
+	padding-left: 20px;
+	color: #fff;
 }
 
 .nav-bar .entries,

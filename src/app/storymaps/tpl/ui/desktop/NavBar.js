@@ -111,20 +111,23 @@ define(["lib-build/tpl!./NavBar",
 				else {
 					container.find('.dropdown').addClass('active');
 					container.find('.dropdown .entry').eq(index).addClass('active');
-					
+
 					if ( ! app.isLoading ) {
 						// Open the dropdown if not open
 						if ( ! container.find('.dropdown').hasClass("open") )
 							container.find('.dropdown-toggle').click();
-						
+
 						// Focus on the dropdown entry
 						container.find('.dropdown .entry').eq(index).focus();
 					}
 				}
-				
+
+        // Update entry title
+        container.find('.entryTitle').text(_entries[index].title);
+
 				_entryIndex = index;
 			};
-			
+
 			this.getEntryIndex = function()
 			{
 				return _entryIndex;
